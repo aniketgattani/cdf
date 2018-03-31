@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Forgot Password | Chat App</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static '/external/css/uikit.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/custom.css' %}">
+    <script type="text/javascript" src="{% static '/external/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/external/js/uikit.min.js' %}"></script>
+</head>
+<body class="uk-background-muted uk-height-viewport">
+
+<div class="uk-padding-large">
+
+</div>
+<div class="uk-grid-small uk-child-width-1-3@s uk-flex-center" uk-grid>
+    <form  id="login" class="uk-form-stacked" action="/forgot" method="POST">
+        <div class="uk-flex-first">
+            <div class="uk-card uk-card-default uk-card-body">
+                <legend class="uk-legend uk-text-center uk-text-muted uk-text-xlarge">Forgot Password</legend>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Username</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" name="username" type="text" placeholder="Enter your username" value="" required>
+                    </div>
+                </div>
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">New Password</label>
+                    <div class="uk-form-controls">
+                        <input class="uk-input" name="password" type="password" placeholder="Enter your Password" required>
+                    </div>
+                </div>
+                <span id="form-message" class="uk-text-muted"></span>
+                <br>
+                <div class="uk-text-center">
+                    <input class="uk-button-primary uk-button" type="submit" value="Submit" name="login">
+                </div>
+                <br>
+                <div class="uk-text-center">
+                    <a class="uk-button uk-button-text" href="/login">Go to Login</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

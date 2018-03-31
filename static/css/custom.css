@@ -1,0 +1,113 @@
+.uk-custom-search {
+    background: rgba(0,0,0,0.4)!important;
+    border-radius: 20px;
+    border: 0!important;
+    color: white;
+}
+
+.uk-message-div {
+    max-width: 300px;
+    border-radius: 12px;
+}
+
+.uk-background-custom {
+    background-color: #84B7FD;
+    color: rgba(0,0,0,0.5);
+}
+
+.uk-padding-xs {
+    padding: 4px 15px;
+}
+
+#uk-messages-box {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding-bottom: 15px;
+    padding-right: 10px;
+}
+
+#uk-compose {
+    box-shadow: 0 15px 32px;
+    z-index: 0;
+}
+
+#message-input {
+    height: 56px;
+    border: 1px solid lightgrey;
+    box-sizing: border-box;
+    padding: 2px 50px 2px 4px;
+    overflow-y: auto;
+    width: 100%;
+}
+
+#emoji-button {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 32px;
+    color: lightgrey;
+    transition: all 0.3s ease;
+}
+
+#emoji-button:hover {
+    color: #84B7FD;
+}
+
+#emojiContainer {
+    position: fixed;
+    bottom: 60px;
+    z-index: 10000;
+    right: 200px;
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px lightgrey;
+}
+
+.newMsgRcd > .uk-badge.customBadge {
+    background: white!important; 
+}
+
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #B4B8AB;
+    outline: 1px solid slategrey;
+    border-radius: 4px;
+}
+
+.uk-online-container {
+    height: calc(100vh - 94px);
+    overflow-y: auto;
+}
+
+.uk-online-box {
+    border-bottom: 0.5px solid rgba(255,255,255,0.2);
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.uk-online-box:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.uk-online-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);
+}
+
+.uk-online-box.active {
+    background-color: rgba(0,0,0,0.2);
+    border-bottom: 0;
+}

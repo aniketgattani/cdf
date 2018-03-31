@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Login | Chat App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static '/external/css/uikit.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/custom.css' %}">
+    <script type="text/javascript" src="{% static '/external/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/external/js/uikit.min.js' %}"></script>
+</head>
+<body class="uk-background-primary uk-height-viewport">
+
+<div class="uk-padding-large">
+
+</div>
+<div class="uk-grid-small uk-child-width-1-3@s uk-flex-center" uk-grid>
+    <div class="uk-flex-first">
+        <div class="uk-card uk-card-default uk-card-body">
+            <legend class="uk-legend uk-text-center uk-text-muted uk-text-xlarge">Login</legend>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Username</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="username" name="username" type="text" placeholder="Enter your username" value="" required>
+                </div>
+            </div>
+            <div class="uk-margin">
+                <label class="uk-form-label" for="form-stacked-text">Password</label>
+                <div class="uk-form-controls">
+                    <input class="uk-input" id="password" name="password" type="password" placeholder="Enter your Password" required>
+                </div>
+            </div>
+            <div class="uk-margin uk-text-center">
+                <span id="form-message" class="uk-text-danger"></span>
+            </div>
+            <br>
+            <div class="uk-text-center">
+                <input class="uk-button-primary uk-button" type="submit" onclick="formSubmit()" value="Log In" name="login">
+            </div>
+            <br>
+            <div class="uk-text-center">
+                <a class="uk-button uk-button-text" href="/signup">Don't have an account</a> |
+                <a class="uk-button uk-button-text" href="/forgot">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function formSubmit(){
+        var username=$('#username').val();
+        var password=$('#password').val();
+        $(".uk-input").attr("disabled","true")
+        $.ajax({
+            url:'/login',
+            type:'POST',
+            data:{'username':username,'password':password},
+            dataType:'json',
+            success:function(result){
+                if(result['login']==1) window.location = "/chating";
+                else {
+                    $(".uk-input").removeAttr("disabled")
+                    $("#form-message").text("Check the credentials")
+                }
+            },
+            error:function(result){
+                console.log(result);
+            },
+        });
+    }
+</script>
+</body>
+</html>

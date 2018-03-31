@@ -1,0 +1,60 @@
+{
+    "messages": [
+        {
+            "message": "hey!",
+            "me": true
+        },
+        {
+            "message": "H",
+            "me": false
+        },
+        {
+            "message": "kya kar raha hai?",
+            "me": true
+        },
+        {
+            "message": "kahi chale?",
+            "me": true
+        },
+        {
+            "message": "Ok bro...",
+            "me": false
+        },
+        {
+            "message": "Cool",
+            "me": true
+        },
+        {
+            "message": "Cool",
+            "me": true
+        },
+        {
+            "message": "Coo2l",
+            "me": true
+        },
+        {
+            "message": "Cool",
+            "me": true
+        },
+        {
+            "message": "Cool",
+            "me": true
+        },
+        {
+            "message": "Coo345l",
+            "me": true
+        },
+        {
+            "message": "Cool",
+            "me": true
+        },
+        {
+            "message": "Cool",
+            "me": true
+        },
+        {
+            "message": "Cool",
+            "me": true
+        }
+    ]
+}

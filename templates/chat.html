@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Kiski maa randi? {{name}}
+	<input type="text" name="msg" id="msg">
+	<input type="text" hidden name="from" value="admin">
+	<input type="submit" id="submit" onclick="msg()">
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	function msg(){
+		$.ajax({
+			url:"../message",
+			type:'POST',
+			data:{'message': $('#msg').val(),'msg_from':1,'msg_to':2},
+			dataType:'json',
+			success: function(result){
+				console.log('randichut');
+				console.log(result);
+			},
+			error: function(result){
+				console.log('randi ka choda');
+				console.log(result);
+			} 
+		});
+	}
+</script>
+</html>
