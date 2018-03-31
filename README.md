@@ -8,3 +8,4 @@
 - pip install pusher
 - pip install re
 - Use sql for db
+- Use this (https://drive.google.com/open?id=13bQSw_BVV2TljiiqbvqtmMm5v8lkWui-) for fetching the model place it in cfd folder
