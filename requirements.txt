@@ -38,7 +38,7 @@ decorator==4.2.1
 dill==0.2.7.1
 distlib==0.2.5
 distributed==1.19.1
-Django==1.11.11
+Django==1.11.29
 docutils==0.14
 entrypoints==0.2.3
 enum34==1.1.6
